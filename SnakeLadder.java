@@ -7,6 +7,7 @@ System.out.println("Welcome to Snake ladder game");
 int Start_Position=0;
 int PlayerPosition=0;
 int PlayerPeriviousPosition=0;
+int dicecount=0;
 
 while (PlayerPosition <= 100)
 {
@@ -31,7 +32,8 @@ case 2:
 			System.out.println("ooo You are bitten by snake");
 			break;
 default:
-			System.out.println("Invalid option"); 
+			System.out.println("Invalid option");
+System.out.println("Player position after dice roll" + PlayerPosition); 
 }
 if(PlayerPosition < 0)
 {
@@ -46,7 +48,7 @@ else if(PlayerPosition == 100)
 		break;
 }
 }
-System.out.println(PlayerPosition);
+System.out.println("No of times dice has been rolled="+dicecount);
 System.out.println("Player wins");
 }
 }
