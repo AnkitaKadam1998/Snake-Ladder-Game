@@ -6,6 +6,7 @@ public static void main(String args[])
 System.out.println("Welcome to Snake ladder game");
 int Start_Position=0;
 int PlayerPosition=0;
+int PlayerPeriviousPosition=0;
 
 while (PlayerPosition <= 100)
 {
@@ -36,7 +37,16 @@ if(PlayerPosition < 0)
 {
 		PlayerPosition=Start_Position;
 }
+else if(PlayerPosition > 100)
+{
+		PlayerPosition=PlayerPeriviousPosition;
 }
+else if(PlayerPosition == 100)
+{
+		break;
+}
+}
+System.out.println(PlayerPosition);
 System.out.println("Player wins");
 }
 }
